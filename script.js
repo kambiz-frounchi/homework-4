@@ -10,8 +10,9 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score*/
 
-var TIME_DECREMENT_IF_WRONG = 10;
+var INTERVAL = 1;
 var MAX_TIME = 60;
+var TIME_DECREMENT_IF_WRONG = 10;
 var question = 0;
 var timerHandle = null;
 var state = {
@@ -56,15 +57,18 @@ var quiz = {
     timeDecrementIfWrong: 5, //seconds
     numQuestions: 5,
     currentQuestionNumber: 0,
+    timePassed: 0, //seconds
+    interval: 1,//seconds
     highScores: [],
-    initialize: function (timeDecrementIfWrong, maxTime, questionAnswers) {
+    initialize: function (interval, maxTime, timeDecrementIfWrong, questionAnswers) {
+        this.interval = interval;
+        this.maxTime = maxTime;
+        this.timeDecrementIfWrong =  timeDecrementIfWrong;
         this.numQuestions = questionAnswers.length;
         questionAnswers.forEach(element => {
             this.questionAnswers.push(element);
         });
-        this.questionAnswers = questionAnswers;
-        this.timeDecrementIfWrong =  timeDecrementIfWrong;
-        this.maxTime = maxTime;
+        this.questionAnswers = questionAnswers;        
     }
 
 }
@@ -98,36 +102,18 @@ function answerButtonCb(event) {
     }
 
     state.questionNumber += 1;
-    /*
-    questionAnswerElement.removeChild(questionElement);
-    questionElement = null;
-    questionAnswerElement.removeChild(answersElement);
-    answersElement = null;
+
     createQuestionElements(state.questionNumber);
-    */
 }
 
 function createQuestionElements(questionNumber) {
     state.questionNumber = questionNumber;
-    if (questionElement == null) {
-        questionElement = document.createElement("div");
-        questionElement.setAttribute("id", "question");
-    }
-
-    if (answersElement == null) {
-        answersElement = document.createElement("div");
-        answersElement.setAttribute("id", "answers");
-    }
 
     questionElement.textContent = questionAnswers[questionNumber].question;
     quiz.questionAnswers[questionNumber].answers.forEach(function(answer, index) {
-        //buttonElement = document.createElement("button");
         buttonId = "button-" + index;
         console.log("#" + buttonId);
-        //buttonElement = document.querySelectorAll("data-button=" + buttonId);
-        //buttonElement = $("[data-button=" + buttonId + "]");
         buttonElement = document.querySelector("#" + buttonId);
-        console.log(buttonElement);
         buttonElement.classList.remove("invisible");
         buttonElement.setAttribute("data-button", buttonId);
         buttonElement.setAttribute("class", "btn btn-secondary");
@@ -147,7 +133,7 @@ function startButtonCb() {
     createQuestionElements(0);
 }
 
-quiz.initialize(TIME_DECREMENT_IF_WRONG, MAX_TIME, questionAnswers);
+quiz.initialize(INTERVAL, MAX_TIME, TIME_DECREMENT_IF_WRONG, questionAnswers);
 startButtonElement.addEventListener("click", startButtonCb);
 
 
