@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    <header class="text-right"> Time: <span id="timer"> </span></header>
     <div id="start-page" class="container">
         <div class="row">
             <div class="col-md">
@@ -19,22 +20,22 @@
         </div>
     </div>
 
-    <div id="question-page" class="container">
+    <div id="question-page" class="container invisible">
         <div class="row">
-            <div class="col-md"></div>
-            <div class="col-md">
+            <div class="col-md text-md-center">
                 <div id="question-answer">
-                    <div id="question"></div>
+                    <div id="question" class="font-weight-bold h3"></div>
+                    <br>
                     <div id="answers" class="btn-group-vertical" role="group" aria-label="Basic example">
-                        <button type="button" id="button-0" class="btn btn-secondary invisible"></button>
-                        <button type="button" id="button-1" class="btn btn-secondary invisible"></button>
-                        <button type="button" id="button-2" class="btn btn-secondary invisible"></button>
-                        <button type="button" id="button-3" class="btn btn-secondary invisible"></button>
+                        <button type="button" id="button-0" class="btn btn-secondary h3"></button>
+                        <button type="button" id="button-1" class="btn btn-secondary h3"></button>
+                        <button type="button" id="button-2" class="btn btn-secondary h3"></button>
+                        <button type="button" id="button-3" class="btn btn-secondary h3"></button>
                     </div>
                 </div>
-                <div id="result"></div>
+                <br>
+                <div id="result" class="h3"></div>
             </div>
-            <div class="col-md"></div>
         </div>
     </div>
 
