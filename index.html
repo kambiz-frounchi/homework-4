@@ -10,18 +10,72 @@
 </head>
 <body>
 
-    <button type="button" id="start-button" class="btn btn-primary">Start Quiz</button>
-
-    <div id="question-answer">
-        <div id="question"></div>
-        <div id="answers" class="btn-group-vertical" role="group" aria-label="Basic example">
-            <button type="button" id="button-0" data-button="button-0" class="btn btn-secondary invisible"></button>
-            <button type="button" id="button-1" data-button="button-1" class="btn btn-secondary invisible"></button>
-            <button type="button" id="button-2" data-button="button-2" class="btn btn-secondary invisible"></button>
-            <button type="button" id="button-3" data-button="button-3" class="btn btn-secondary invisible"></button>
-          </div>
+    <div id="start-page" class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1 class="font-weight-bold align-middle"> Welcome to this Javascript Quiz! </h1>
+                <button type="button" id="start-button" class="btn btn-primary align-middle">Start Quiz</button>
+            </div>
+        </div>
     </div>
-    <div id="result"> </div>
+
+    <div id="question-page" class="container">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md">
+                <div id="question-answer">
+                    <div id="question"></div>
+                    <div id="answers" class="btn-group-vertical" role="group" aria-label="Basic example">
+                        <button type="button" id="button-0" class="btn btn-secondary invisible"></button>
+                        <button type="button" id="button-1" class="btn btn-secondary invisible"></button>
+                        <button type="button" id="button-2" class="btn btn-secondary invisible"></button>
+                        <button type="button" id="button-3" class="btn btn-secondary invisible"></button>
+                    </div>
+                </div>
+                <div id="result"></div>
+            </div>
+            <div class="col-md"></div>
+        </div>
+    </div>
+
+    <div id="results-page" class="container invisible">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md">
+                <h1>All Done!</h1>
+                <h2>Your final score is: <span id="final-score"> </span></h2>
+                <h3>Enter your initials:
+                    <span>
+                        <input id="initials" class="form-control" type="text">
+                    </span>
+                </h3>
+                <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-md"></div>
+        </div>
+    </div>
+
+    <div id="highlights-page" class="container invisible">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md">
+                <div id="high-scores-row" class="row">
+                    <div id="high-scores" class="col-md align-middle"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button" id="start-over" class="btn btn-secondary">Start over</button>
+                    </div>
+                    <div class="col-md">
+                        <button type="button" id="clear-highlights" class="btn btn-secondary">Clear Highlights</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md"></div>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
