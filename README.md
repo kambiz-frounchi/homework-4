@@ -1,6 +1,16 @@
-# 04 Web APIs: Code Quiz
+# Code Quiz
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+ This app is a timed code quiz with multiple-choice questions. It will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+
+ I haven't used any jQuery. Most of the styling is through bootstap, otherwise used vanilla Javascript to deal with the DOM elements. I have also used local storage to save the high scorers. At the start of the program, the high scrorers are retrieved from local storage and populated in the quiz object.
+
+ A more exact definition of the program is described below in the User Story and Acceptance Criteria sections.
+
+ The URL of the app is: https://kambiz-frounchi.github.io/homework-4/.
+
+ Please check out a few screenshots of the app in these images: quiz1.jpg, quiz2.jpg, quiz3.jpg and quiz4.jpg.
+
+
 
 ## User Story
 
@@ -26,17 +36,5 @@ WHEN the game is over
 THEN I can save my initials and score
 ```
 
-The following animation demonstrates the application functionality:
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
 
-### Review
-
-You are required to submit the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
