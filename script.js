@@ -10,7 +10,7 @@ var questionAnswer1 = {
 }
 
 var questionAnswer2 = {
-    question: "Which of the below functions is not used with DOM elements?",
+    question: "Which of the below functions is not necessarily with DOM elements?",
     answers: ["push", "querySelector", "createElement", "removeChild"],
     correctAnswer: 0
 }
@@ -22,8 +22,8 @@ var questionAnswer3 = {
 }
 
 var questionAnswer4 = {
-    question: "Is it required to explicitly define the type of a variable in JavaScript?",
-    answers: ["depends", "no", "yes", "N/A"],
+    question: "What does \"this\" reference in JavaScript?",
+    answers: ["String", "Object", "Number", "Function"],
     correctAnswer: 1
 }
 
