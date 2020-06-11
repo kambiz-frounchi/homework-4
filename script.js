@@ -35,7 +35,7 @@ var questionAnswer5 = {
 
 questionAnswers = [questionAnswer1, questionAnswer2, questionAnswer3, questionAnswer4, questionAnswer5];
 
-//quiz class
+//quiz object
 var quiz = {
     questionAnswers: [],
     maxTime: 60, //60 seconds
