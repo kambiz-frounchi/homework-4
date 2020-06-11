@@ -218,6 +218,7 @@ function startOver() {
         clearInterval(timerHandle);
     }
     timerElement.textContent = quiz.maxTime;
+    clearHighlights();
     highlightsPage.classList.add("invisible");
     startPage.classList.remove("invisible");
 }
