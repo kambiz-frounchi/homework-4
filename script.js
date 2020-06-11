@@ -162,18 +162,23 @@ function answerButtonCb(event) {
     }
 
     if (quiz.currentQuestionNumber >= (quiz.numQuestions - 1)) {
-        clearInterval(timerHandle);
-        showResults();
+        setTimeout(function () {
+            clearInterval(timerHandle);
+            showResults();
+        }, 1000);
         return;
-    }    
+    }
 
-    quiz.currentQuestionNumber += 1;
-
-    createQuestionElements(quiz.currentQuestionNumber);
+    //one second pause after clicking on the answer till it shows the next question
+    setTimeout(function () {
+        quiz.currentQuestionNumber += 1;
+        createQuestionElements(quiz.currentQuestionNumber);
+    }, 1000);
 }
 
 function createQuestionElements(questionNumber) {
     console.log("createQuestionElements" + questionNumber);
+    resultElement.textContent = "";
     questionElement.textContent = questionAnswers[questionNumber].question;
     quiz.questionAnswers[questionNumber].answers.forEach(function(answer, index) {
         buttonId = "button-" + index;

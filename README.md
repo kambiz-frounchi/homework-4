@@ -4,7 +4,7 @@
 
  I haven't used any jQuery. Most of the styling is through bootstap, otherwise used vanilla Javascript to deal with the DOM elements. I have also used local storage to save the high scorers. At the start of the program, the high scrorers are retrieved from local storage and populated in the quiz object.
 
- A more exact definition of the program is described below in the User Story and Acceptance Criteria sections.
+ A more exact high level definition of the program is described below in the User Story and Acceptance Criteria (requirements) sections.
 
  The URL of the app is: https://kambiz-frounchi.github.io/homework-4/.
 
